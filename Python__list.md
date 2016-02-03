@@ -60,3 +60,24 @@
 ###可以改变对象值的可变对象的方法是没有返回值的，不可变对象的方法是不能改变他们的值的，所以他们呢必须返回一个新的对象。
 
 ###用列表构建数据结构（堆栈和队列）
+
+#迭代器
+##What is 迭代器
+序列类型：list,str,tuple
+非序列类型：dict,file
+自定义的有__iter__方法或者__getiter__的类型
+都是可迭代对象
+##Python的列表解析,比for循环速度快一倍的速度来根据已有的列表生成新列表的方式，
+	语法结构：[expression for iter_var in iterable]
+    ```	
+	l1 = [1,2,3,4,5,6]
+	l2 = [ i**2 for i in l1 ]
+    ```
+
+	[expression for iter_var in iterable if cond_expr]
+	
+    ```	
+	l1 = [1,2,3,4,5,6]
+	l2 = [ i**2 for i in l1 if i >= 3]
+    ```
+
